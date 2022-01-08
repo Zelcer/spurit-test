@@ -1,1 +1,240 @@
 /* Смотри сколько снизу свободного места! Оно идеально подойдёт, чтобы писать твои стили! */
+
+/* CUSTOM PROPERTIES */
+
+:root {
+  --basic-white: #ffffff;
+  --basic-black: #000000;
+  --mine-shaft: #2f2f2f;
+  --tundora: #4e4e4e;
+  --verdun-green: #1f5200;
+  --la-palma: #42940f;
+  --golden-tainoi: #ffcf56;
+  --classic-rose: #fdcff3;
+
+  --arial-black: 'Arial Black', sans-serif;
+}
+
+/* GLOBAL STYLES */
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  min-width: 375px;
+  margin: 0;
+  padding: 0;
+  font-family: 'Arial', sans-serif;
+  font-weight: 400;
+  color: var(--mine-shaft);
+  background-color: #f6f6f6;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+a {
+  text-decoration: none;
+}
+
+.container {
+  max-width: 1180px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.reset-btn {
+  padding: 0;
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+  outline: 0;
+}
+
+.title-h2 {
+  font-family: var(--arial-black);
+  font-size: 48px;
+  line-height: 72px;
+  font-weight: 900;
+  color: var(--basic-black);
+  text-transform: uppercase;
+  text-align: center;
+}
+
+@media (max-width: 767px) {
+  .title-h2 {
+    font-size: 24px;
+    line-height: 36px;
+  }
+}
+
+/* PRODUCTS SECTION */
+
+.products {
+  padding: 30px 0;
+}
+
+.products__title {
+  margin: 0;
+  margin-bottom: 40px;
+}
+
+.products__list {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+  justify-items: center;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+@media (max-width: 1023px) {
+  .products__list {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 767px) {
+  .products__title {
+    margin-bottom: 20px;
+  }
+
+  .products__list {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* CARD PRODUCT */
+
+.card-product {
+  position: relative;
+  border-radius: 12px;
+  box-shadow: 0 0 45px -4px rgba(0, 0, 0, 0.18);
+}
+
+.card-product__img img {
+  display: block;
+  width: 100%;
+  height: 214px;
+  object-fit: cover;
+  border-top-left-radius: 12px;
+  border-top-right-radius: 12px;
+}
+
+.card-product__flag {
+  position: absolute;
+  top: 16px;
+  left: 16px;
+}
+
+.card-product__content {
+  padding: 24px 23px;
+  background-color: var(--basic-white);
+  border-bottom-left-radius: 12px;
+  border-bottom-right-radius: 12px;
+}
+
+.card-product__title {
+  margin: 0;
+  margin-bottom: 16px;
+  font-family: var(--arial-black);
+  font-size: 24px;
+  line-height: 36px;
+  font-weight: 900;
+}
+
+.card-product__title a {
+  color: var(--mine-shaft);
+  transition: opacity 0.3s ease;
+}
+
+.card-product__title a:hover,
+.card-product__title a:focus {
+  opacity: 0.7;
+}
+
+.card-product__text {
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 4;
+  overflow: hidden;
+  height: 96px;
+  margin: 0;
+  margin-bottom: 24px;
+  font-size: 16px;
+  line-height: 24px;
+  text-overflow: ellipsis;
+}
+
+.card-product__btn {
+  width: 100%;
+  padding: 11px 10px 12px;
+  font-family: var(--arial-black);
+  font-size: 18px;
+  line-height: 25px;
+  font-weight: 900;
+  color: var(--la-palma);
+  border-radius: 8px;
+  box-shadow: inset 0 0 0 2px var(--la-palma);
+  transition: all 0.3s ease;
+}
+
+.card-product__btn:disabled {
+  color: var(--basic-white);
+  background-color: var(--tundora);
+  box-shadow: none;
+  cursor: not-allowed;
+  pointer-events: none;
+}
+
+.card-product__btn:hover,
+.card-product__btn:focus {
+  color: var(--basic-white);
+  background-color: var(--la-palma);
+}
+
+.card-product__btn:active {
+  background-color: var(--verdun-green);
+  box-shadow: none;
+}
+
+@media (max-width: 767px) {
+  .card-product {
+    max-width: 500px;
+  }
+}
+
+/* FLAG */
+
+.flag {
+  display: flex;
+  align-items: flex-start;
+  flex-wrap: wrap;
+}
+
+.flag__item:not(.flag__item:last-child) {
+  margin-right: 16px;
+  margin-bottom: 10px;
+}
+
+.flag__item {
+  padding: 1px 16px 0;
+  font-size: 16px;
+  line-height: 24px;
+  text-transform: uppercase;
+  border-radius: 8px;
+}
+
+.flag__item--new {
+  background-color: var(--classic-rose);
+}
+
+.flag__item--last {
+  background-color: var(--golden-tainoi);
+}
