@@ -3,14 +3,73 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport"
-          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+          content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>SpurIT - Тестовое задание 1. HTML и CSS</title>
     <link rel="stylesheet" href="./index.css">
 </head>
 <body>
-<main>
+  <main>
 <!-- Напиши разметку на этом месте и больше ничего не трогай -->
-</main>
+    <section class="products">
+      <div class="products__wrap container">
+        <h2 class="products__title title-h2">Товары недели</h2>
+        <ul class="products__list">
+          <li class="products__item card-product">
+            <div class="card-product__flag flag">
+              <span class="flag__item flag__item--new">Новинка</span>
+              <span class="flag__item flag__item--last">Последний</span>
+            </div>
+            <div class="card-product__img">
+              <picture>
+                <source type="image/webp" srcset="img/webp/product@1x.webp 1x, img/webp/product@2x.webp 2x">
+                <source type="image/jpeg" srcset="img/product@1x.jpg 1x, img/product@2x.jpg 2x">
+                <img src="img/product@1x.jpg" alt="Апельсиновый сок" width="380" height="214">
+              </picture>
+            </div>
+            <div class="card-product__content">
+              <h3 class="card-product__title">
+                <a href="#">Апельсиновый сок</a>
+              </h3>
+              <p class="card-product__text">Он&nbsp;придётся по&nbsp;душе, даже если ты&nbsp;слива лиловая, спелая, садовая.</p>
+              <button class="reset-btn card-product__btn" type="button">В корзину</button>
+            </div>
+          </li>
+          <li class="products__item card-product">
+            <div class="card-product__img">
+              <picture>
+                <source type="image/webp" srcset="img/webp/product@1x.webp 1x, img/webp/product@2x.webp 2x">
+                <source type="image/jpeg" srcset="img/product@1x.jpg 1x, img/product@2x.jpg 2x">
+                <img src="img/product@1x.jpg" alt="Апельсиновый сок" width="380" height="214">
+              </picture>
+            </div>
+            <div class="card-product__content">
+              <h3 class="card-product__title">
+                <a href="#">Апельсиновый сок</a>
+              </h3>
+              <p class="card-product__text">Он&nbsp;придётся по&nbsp;душе, даже если ты&nbsp;слива лиловая, спелая, садовая. Ну&nbsp;что сказать? Ну&nbsp;что сказать? Устроены так длинные описания.</p>
+              <button class="reset-btn card-product__btn" type="button">В корзину</button>
+            </div>
+          </li>
+          <li class="products__item card-product">
+            <div class="card-product__img">
+              <picture>
+                <source type="image/webp" srcset="img/webp/product@1x.webp 1x, img/webp/product@2x.webp 2x">
+                <source type="image/jpeg" srcset="img/product@1x.jpg 1x, img/product@2x.jpg 2x">
+                <img src="img/product@1x.jpg" alt="Апельсиновый сок" width="380" height="214">
+              </picture>
+            </div>
+            <div class="card-product__content">
+              <h3 class="card-product__title">
+                <a href="#">Апельсиновый сок</a>
+              </h3>
+              <p class="card-product__text">Он&nbsp;придётся по&nbsp;душе, даже если ты&nbsp;слива лиловая, спелая, садовая.</p>
+              <button class="reset-btn card-product__btn" type="button" disabled>Закончилось</button>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </section>
+  </main>
 </body>
 </html>
